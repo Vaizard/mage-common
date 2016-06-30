@@ -1,0 +1,10 @@
+---
+mage_packages:
+  # distro specific
+  - app-portage/eix
+  - app-portage/flaggie
+  - app-portage/gentoolkit
+  # common base
+  - app-misc/mc
+  - net-analyzer/traceroute
+  - dev-vcs/git

@@ -1,0 +1,9 @@
+---
+mage_packages:
+  # distro specific
+  - gdebi-core
+  - python
+  # common base
+  - mc
+  - inetutils-traceroute
+  - git
