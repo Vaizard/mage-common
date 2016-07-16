@@ -1,22 +1,16 @@
 ---
 - name: "Installing packages"
   portage: 
-    package: "{{ mage_packages }}"
+    package: "{{ item }}"
     update: yes
     deep: yes
-    sync: yes
+    sync: web
     newuse: yes
-    
-- name "Making sure a default self-signed cert is present"
-  command: >
-    openssl req -new
-      -x509
-      -nodes
-      -days 3650
-      -sha256
-      -subj "/C=''/L=''/O=''/OU=''/CN={{ ansible_fqdn }}/emailAddress=''"
-      -keyout /etc/ssl/private/ssl-cert-snakeoil.key
-      -out /etc/ssl/certs/ssl-cert-snakeoil.pem
+  with_items:
+    - "{{ mage_packages }}"
+
+- name: "Making sure a default self-signed cert is present"
+  command: openssl req -new -x509 -nodes -days 3650 -sha256 -subj "/C=US/L=LA/O=VAIZ/OU=IT/CN={{ ansible_fqdn }}" -keyout /etc/ssl/private/ssl-cert-snakeoil.key -out /etc/ssl/certs/ssl-cert-snakeoil.pem
   args:
     creates: "/etc/ssl/certs/ssl-cert-snakeoil.pem"
     
