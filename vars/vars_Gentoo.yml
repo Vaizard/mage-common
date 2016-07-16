@@ -8,3 +8,4 @@ mage_packages:
   - app-misc/mc
   - net-analyzer/traceroute
   - dev-vcs/git
+  - deb-libs/openssl

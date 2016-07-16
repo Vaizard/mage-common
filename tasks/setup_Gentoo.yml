@@ -6,3 +6,17 @@
     deep: yes
     sync: yes
     newuse: yes
+    
+- name "Making sure a default self-signed cert is present"
+  command: >
+    openssl req -new
+      -x509
+      -nodes
+      -days 3650
+      -sha256
+      -subj "/C=''/L=''/O=''/OU=''/CN={{ ansible_fqdn }}/emailAddress=''"
+      -keyout /etc/ssl/private/ssl-cert-snakeoil.key
+      -out /etc/ssl/certs/ssl-cert-snakeoil.pem
+  args:
+    creates: "/etc/ssl/certs/ssl-cert-snakeoil.pem"
+    

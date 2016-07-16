@@ -7,3 +7,4 @@ mage_packages:
   - mc
   - inetutils-traceroute
   - git
+  - openssl
