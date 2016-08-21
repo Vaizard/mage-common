@@ -8,9 +8,4 @@
     newuse: yes
   with_items:
     - "{{ mage_packages }}"
-
-- name: "Making sure a default self-signed cert is present"
-  command: openssl req -newkey rsa:4096 -x509 -nodes -days 3650 -sha512 -subj "/C=US/L=LA/O=VAIZ/OU=IT/CN={{ ansible_fqdn }}" -keyout /etc/ssl/private/ssl-cert-snakeoil.key -out /etc/ssl/certs/ssl-cert-snakeoil.pem
-  args:
-    creates: "/etc/ssl/certs/ssl-cert-snakeoil.pem"
     

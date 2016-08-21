@@ -8,3 +8,4 @@ mage_packages:
   - inetutils-traceroute
   - git
   - openssl
+  - python-simplejson

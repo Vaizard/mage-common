@@ -9,3 +9,4 @@ mage_packages:
   - net-analyzer/traceroute
   - dev-vcs/git
   - dev-libs/openssl
+  - dev-python/simplejson
