@@ -10,3 +10,4 @@ mage_packages:
   - dev-vcs/git
   - dev-libs/openssl
   - dev-python/simplejson
+  - app-misc/ca-certificates
