@@ -3,6 +3,7 @@ mage_packages:
   # distro specific
   - app-portage/eix
   - app-portage/flaggie
+  - app-portage/layman  
   - app-portage/gentoolkit
   # common base
   - app-misc/mc
