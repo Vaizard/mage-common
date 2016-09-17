@@ -9,3 +9,7 @@
   with_items:
     - "{{ mage_packages }}"
     
+- name: "Initializing eix"
+  command: eix-update
+  args:
+    creates: /var/cache/eix/portage.eix
