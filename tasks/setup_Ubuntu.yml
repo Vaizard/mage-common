@@ -4,4 +4,3 @@
     name: "{{ mage_packages }}"
     state: latest
     update_cache: true
-

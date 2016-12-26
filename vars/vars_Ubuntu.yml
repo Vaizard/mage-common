@@ -3,6 +3,7 @@ mage_packages:
   # distro specific
   - gdebi-core
   - python
+  - python-software-properties
   # common base
   - mc
   - inetutils-traceroute
