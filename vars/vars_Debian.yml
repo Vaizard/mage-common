@@ -1,0 +1,14 @@
+---
+mage_packages:
+  # distro specific
+  - gdebi-core
+  - python
+  - software-properties-common
+  - bash-completion
+  # common base
+  - mc
+  - inetutils-traceroute
+  - git
+  - openssl
+  - python-simplejson
+  - ca-certificates

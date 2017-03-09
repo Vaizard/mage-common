@@ -5,7 +5,7 @@
 
 - name: "Setting things up for {{ ansible_distribution }}"
   include: "setup_{{ ansible_distribution }}.yml"
-  when: ansible_distribution in [ 'Ubuntu', 'Gentoo' ]
+  when: ansible_distribution in [ 'Ubuntu', 'Gentoo', 'Debian' ]
 
 - name: "Making sure a default self-signed cert is present"
   command: openssl req -newkey rsa:4096 -x509 -nodes -days 3650 -sha512 -subj "/C=US/L=LA/O=VAIZ/OU=IT/CN={{ ansible_fqdn }}" -keyout /etc/ssl/private/mage-snakeoil.key -out /etc/ssl/certs/mage-snakeoil.pem

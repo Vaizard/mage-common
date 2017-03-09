@@ -6,6 +6,7 @@ galaxy_info:
   min_ansible_version: 2.0
   description: This role ensures a common ground exists for mage-orchestrated boxes. It installs a minimal set of expected packages and performs the most rudimentary system setup and configuration (i.e. generating snakeoil certificates, dhparam files, etc.).
   platforms:
+    - name: Debian
     - name: Ubuntu
       versions:
         - xenial
