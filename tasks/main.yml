@@ -14,3 +14,8 @@
 
 - name: "Making sure dhparam file is present"
   command: openssl dhparam -out /etc/ssl/private/dhparams.pem "{{ dhparam_size }}" creates=/etc/ssl/private/dhparams.pem
+    
+- name: "Ensure locale en_US.UTF-8 locale is present"
+  locale_gen:
+    name: en_US.UTF-8
+    state: present
