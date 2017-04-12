@@ -12,3 +12,5 @@ mage_packages:
   - openssl
   - python-simplejson
   - ca-certificates
+  - lynis
+  - rkhunter
