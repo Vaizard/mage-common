@@ -12,3 +12,5 @@ mage_packages:
   - dev-libs/openssl
   - dev-python/simplejson
   - app-misc/ca-certificates
+  - app-forensics/lynis
+  - app-forensics/rkhunter
