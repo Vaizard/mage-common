@@ -5,6 +5,8 @@ mage_packages:
   - python
   - software-properties-common
   - bash-completion
+  - apt-transport-https
+  - unattended-upgrades
   # common base
   - mc
   - inetutils-traceroute
