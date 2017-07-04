@@ -1,0 +1,13 @@
+---
+- name: "Installing packages"
+  dnf:
+    name: "{{ mage_packages }}"
+    state: latest
+
+- name : "Creating /etc/ssl/private directory"
+  file :
+    path  : "/etc/ssl/private"
+    group : "root"
+    owner : "root"
+    state : directory
+    mode  : "700"

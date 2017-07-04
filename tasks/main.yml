@@ -5,7 +5,7 @@
 
 - name: "Setting things up for {{ ansible_distribution }}"
   include: "setup_{{ ansible_distribution }}.yml"
-  when: ansible_distribution in [ 'Ubuntu', 'Gentoo', 'Debian' ]
+  when: ansible_distribution in [ 'Ubuntu', 'Gentoo', 'Debian', 'Fedora' ]
   tags: [ 'install' ]
 
 - name: "Making sure a default self-signed cert is present"

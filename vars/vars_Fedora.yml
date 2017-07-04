@@ -1,0 +1,15 @@
+---
+mage_packages:
+  # distro specific
+  - python
+  - bash-completion
+  - locales
+  # common base
+  - mc
+  - traceroute
+  - git
+  - openssl
+  - python-simplejson
+  - ca-certificates
+  - lynis
+  - rkhunter
