@@ -1,8 +1,8 @@
 ---
 - name: "Installing packages"
-  dnf:
+  package:
     name: "{{ mage_packages }}"
-    state: latest
+    state: installed
 
 - name : "Creating /etc/ssl/private directory"
   file :

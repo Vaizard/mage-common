@@ -3,7 +3,6 @@ mage_packages:
   # distro specific
   - python
   - bash-completion
-  - locales
   # common base
   - mc
   - traceroute

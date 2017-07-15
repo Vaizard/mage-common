@@ -17,9 +17,11 @@
 - name: "Making sure dhparam file is present"
   command: openssl dhparam -out /etc/ssl/private/dhparams.pem "{{ dhparam_size }}" creates=/etc/ssl/private/dhparams.pem
   tags: [ 'configure' ]
-  
+
+  # Rhel based distros don't have a locale-gen command
 - name: "Ensure locale en_US.UTF-8 locale is present"
   locale_gen:
     name: en_US.UTF-8
     state: present
+  when: ansible_distribution not in [ 'Redhat', 'Centos', 'Fedora' ]
   tags: [ 'configure' ]
